@@ -27,23 +27,22 @@ def process_orders(orders):
             else:
                 items[item_name]['orders'] += 1
 
-
     return customers, items 
-
 
 def customer_write(customers):
     customer_list = {phone: name for phone, name in customers.items()}
     with open('customers.json', 'w') as file:
-        json.dump(customer_list, file, indent=4)
+        json.dump(customer_list, file, indent = 4)
 
+def item_write(items):
+    with open('item.json', 'w') as file:
+        json.dump(items, file, indent = 4)
 
-
-
-
-
-orders_file = sys.argv[1]
-orders = read_file(orders_file)
-customers, items = process_orders(orders)
-customer_write(customers)
-print("Processing complete.")
+if __name__ == "__main__":
+    orders_file = sys.argv[1]
+    orders = read_file(orders_file)
+    customers, items = process_orders(orders)
+    customer_write(customers)
+    item_write(items)
+    print("Processing complete.")
 
