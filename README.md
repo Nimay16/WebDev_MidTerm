@@ -6,7 +6,7 @@ This python project processes orders received by a Dosa restaurant and generates
 2. Clone or download this repository.
 3. Open the project directory in your terminal.
 4. Run the project using following command:
-python main.py example_orders.json
+'''python script.py example_orders.json'''
 'example_orders.json' is the name of the json file used for the project.
 5. After runnig the project two new Json file will be created.
 - customers.json- This file consists the name and phone number of the customers.
