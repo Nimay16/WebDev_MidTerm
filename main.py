@@ -29,9 +29,9 @@ def process_orders(orders):
 
 def customer_write(customers):
     """Function for macking customer list Json file"""
-    customer_list = {phone: name for phone, name in customers.items()}
+    customer_dict = {phone: name for phone, name in customers.items()}
     with open('customers.json', 'w', encoding='utf-8') as file:
-        json.dump(customer_list, file, indent = 4)
+        json.dump(customer_dict, file, indent = 4)
 
 def item_write(items):
     """Function for macking item list Json file"""
